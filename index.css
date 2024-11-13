@@ -1,0 +1,265 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.main-content {
+    flex-grow: 1;
+}
+
+.background-image {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('assets/Food.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar {
+    position: absolute;
+    top: 20px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 80px;
+    padding-left: 150px;
+    padding-right: 150px;
+    background: transparent;
+}
+
+.navbar .logo {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo i {
+    margin-right: 10px;
+    font-size: 24px;
+}
+
+.navbar .nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+    color: #ffcc00;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content h1 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: white;
+}
+
+.content p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.order-btn {
+    padding: 12px 30px;
+    background-color: tomato;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.order-btn i {
+    font-size: 20px;
+}
+
+.order-btn:hover {
+    background-color: darkred;
+}
+
+.order-fresh-food {
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 30px;
+    color: black;
+}
+
+.food-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    flex: 0 1 calc(25% - 20px);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.card-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.card-title-price {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.card-title {
+    font-size: 18px;
+}
+
+.card-price {
+    font-size: 18px;
+    color: #e74c3c;
+}
+
+.card-description {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #555;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.add-to-cart {
+    padding: 10px 20px;
+    background-color: #27ae60;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #2ecc71;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.rating i {
+    color: #f39c12;
+    margin-right: 5px;
+}
+
+@media (max-width: 768px) {
+    .food-cards {
+        justify-content: space-around;
+    }
+    .card {
+        flex: 0 1 calc(50% - 20px);
+    }
+    .navbar {
+        padding: 15px 20px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbar .nav-links {
+        display: block;
+        margin-top: 10px;
+    }
+
+    .navbar .nav-links a {
+        font-size: 18px;
+        margin: 5px 0;
+    }
+
+    .navbar .logo {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .food-cards {
+        justify-content: center;
+    }
+    .card {
+        flex: 0 1 calc(100% - 20px);
+    }
+    .navbar .logo {
+        font-size: 20px;
+    }
+
+    .navbar .nav-links a {
+        font-size: 16px;
+    }
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+    color: #333;
+    margin-top: auto;
+    background-color: rgb(250, 250, 240);
+}
